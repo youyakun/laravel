@@ -31,4 +31,7 @@ Route::get('user/{id}', function($id) {
 	return 'User-' . $id;
 });
 
+Route::get('user/{id}/{name?}', function($id, $name = "Jason") {
+    return 'User-Id-' . $id;
+}) -> where('name', '[A-Za-z]');
 
